@@ -45,5 +45,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
     $(DEVICE_PATH)/overlay-aosip
 
+# Recovery
+PRODUCT_PACKAGES += \
+    librecovery_updater_whyred
+
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/whyred/whyred-vendor.mk)

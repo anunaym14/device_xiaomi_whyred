@@ -27,8 +27,15 @@
 
 DEVICE_PATH := device/xiaomi/whyred
 
+# Assert
+TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
+
 # Kernel
 TARGET_KERNEL_CONFIG := whyred_defconfig
+
+# Releasetools
+TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_whyred
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2018-11-01
